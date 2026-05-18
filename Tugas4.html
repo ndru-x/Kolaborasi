@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Website</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f1eb;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #e9dfd2;
+}
+
+/* HERO */
+.hero {
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-brown {
+  background: #8b5e3c;
+  color: white;
+  border-radius: 20px;
+}
+
+/* FEATURES */
+.features {
+  background: #efe7dd;
+  padding: 60px 0;
+}
+.feature-item {
+  text-align: center;
+  position: relative;
+}
+.feature-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 1px;
+  height: 60%;
+  background: #ccc;
+}
+.feature-item:last-child::after {
+  display: none;
+}
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #8b5e3c;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* WHY */
+.why-left {
+  background: #3b2a1a;
+  color: white;
+}
+.why-right {
+  background: #e9dfd2;
+}
+
+/* MENU (GAMBAR RAPI) */
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover; /* biar rapi semua */
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: url('https://images.unsplash.com/photo-1498804103079-a6351b050096') center/cover;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold">Coffee</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="#features" class="nav-link">Menu</a></li>
+      <li class="nav-item"><a href="#why" class="nav-link">Our Story</a></li>
+      <li class="nav-item"><a href="#menu" class="nav-link">Location</a></li>
+      <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Savor the Perfect Brew!</h1>
+    <p class="mb-4">Fresh coffee made with passion. Enjoy premium taste everyday.</p>
+    <button class="btn btn-light me-2">Learn More</button>
+    <button class="btn btn-brown">Order Now</button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <div class="container text-center">
+    <h3 class="mb-5">Features</h3>
+    <div class="row">
+      <div class="col-md-3 feature-item">
+        <div class="icon-circle mb-2"></div>
+        <h5>Espresso</h5>
+        <p class="small">Strong bold taste coffee</p>
+      </div>
+      <div class="col-md-3 feature-item">
+        <div class="icon-circle mb-2"></div>
+        <h5>Latte</h5>
+        <p class="small">Smooth creamy blend</p>
+      </div>
+      <div class="col-md-3 feature-item">
+        <div class="icon-circle mb-2"></div>
+        <h5>Latte Art</h5>
+        <p class="small">Beautiful presentation</p>
+      </div>
+      <div class="col-md-3 feature-item">
+        <div class="icon-circle mb-2"></div>
+        <h5>Cold Brew</h5>
+        <p class="small">Fresh cold coffee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 p-5 why-left">
+      <h2>Why Choose Us?</h2>
+      <p>High quality beans and professional barista experience.</p>
+      <button class="btn btn-light">Read More</button>
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="img-fluid mt-3 rounded">
+    </div>
+
+    <div class="col-md-6 p-5 why-right">
+      <h4>Opening Hours</h4>
+      <h2>8:00 AM - 10:00 PM</h2>
+      <p>Enjoy cozy place and best coffee everyday.</p>
+      <button class="btn btn-brown">Order Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="container py-5">
+  <h3 class="mb-4">Visit Us Today</h3>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+        <p class="mt-2 fw-semibold">Cappuccino</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+        <p class="mt-2 fw-semibold">Latte</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+        <p class="mt-2 fw-semibold">Americano</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187">
+        <p class="mt-2 fw-semibold">Mocha</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section id="footer" class="footer">
+  <h2>Enjoy Your Coffee Time</h2>
+  <p>Best coffee experience everyday</p>
+</section>
+
+<br>
+
+<a href="portofolio.html" class="btn btn-warning">
+      Back
+    </a>
+
+<!-- JS SCROLL -->
+<script>
+document.querySelectorAll('a.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    window.scrollTo({
+      top: target.offsetTop - 70,
+      behavior: 'smooth'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
